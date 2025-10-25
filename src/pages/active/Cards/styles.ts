@@ -22,7 +22,7 @@ export const Card = styled.div`
 export const Container = styled.div`
   display: flex;
   width: 100%;
-  gap: 20px;
+  gap: 10px;
 `;
 
 export const BottomContainer = styled.div`
@@ -35,7 +35,7 @@ export const BottomContainer = styled.div`
 
 export const ImageContainer = styled.div`
   width: 60px;
-  height: 50px;
+  height: 60px;
   overflow: hidden;
   border-radius: 10px;
 `;
@@ -71,7 +71,8 @@ export const CardText = styled.h1`
 
 export const NamesContainer = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 5px;
+  width: 266px;
   flex-direction: column;
 `;
 
