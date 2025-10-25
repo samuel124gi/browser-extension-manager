@@ -35,7 +35,7 @@ export const BottomContainer = styled.div`
 
 export const ImageContainer = styled.div`
   width: 60px;
-  height: 50px;
+  height: 60px;
   overflow: hidden;
   border-radius: 10px;
 `;
@@ -73,6 +73,7 @@ export const NamesContainer = styled.div`
   display: flex;
   gap: 10px;
   flex-direction: column;
+  width: 266px;
 `;
 
 console.log(active);
