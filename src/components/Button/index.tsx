@@ -4,6 +4,7 @@ import { ButtonVariant } from "../../types/component";
 interface ButtonProps {
   variant: ButtonVariant;
   label?: string;
+  background?: string;
   children?: React.ReactNode;
   onClick?: () => void;
 }

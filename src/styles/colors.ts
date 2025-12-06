@@ -9,7 +9,7 @@ const colors = {
   secondary06: "#2F364B",
   secondary07: "#202535",
   secondary08: "#091540",
-  gradient02: "linear-gradient(180deg, #EBF2FC 0%, #EEFBF9 100%);",
+  gradient02: "linear-gradient(180deg, #EBF2FC 0%, #EEFBF9 100%)",
   white: "#FBFDFE",
 };
 

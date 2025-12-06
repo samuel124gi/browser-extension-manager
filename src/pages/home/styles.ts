@@ -1,9 +1,13 @@
 import styled from "@emotion/styled";
 import colors from "../../styles/colors";
-
+export const CardsContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+`;
 export const MainContainer = styled.div`
   padding: 50px 0px;
-  background: ${colors.gradient02};
+  // background: ${colors.gradient02};
 `;
 export const Container = styled.div`
   display: flex;

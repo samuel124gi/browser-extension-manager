@@ -2,7 +2,10 @@ import styled from "@emotion/styled";
 import colors from "../../styles/colors";
 import { ButtonVariant } from "../../types/component";
 
-export const StyledButton = styled.button<{ variant: ButtonVariant }>`
+export const StyledButton = styled.button<{
+  variant: ButtonVariant;
+  background?: string;
+}>`
   width: fit-content;
   height: 46px;
   border: 1px solid ${colors.secondary03};
@@ -24,8 +27,8 @@ export const StyledButton = styled.button<{ variant: ButtonVariant }>`
     line-height: 140%;
   font-weight: 500;
     &:hover {
-      background-color: ${colors.primary02};
-      color:${colors.white};
+    background-color: ${colors.primary02};
+    color:${colors.white};
     border: none;
     }
   `}
