@@ -1,13 +1,11 @@
 import styled from "@emotion/styled";
-import colors from "../../../styles/colors";
-import datas from "../../../services/data.json";
+import colors from "../../styles/colors";
+interface buttonProps {
+  alignItem?: string;
+  background?: string;
+  active?: boolean;
+}
 
-const active = datas.filter((data) => data.isActive);
-export const CardsContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-`;
 export const Card = styled.div`
   display: flex;
   gap: 20px;
@@ -22,13 +20,12 @@ export const Card = styled.div`
 export const Container = styled.div`
   display: flex;
   width: 100%;
-  gap: 10px;
+  gap: 20px;
 `;
 
 export const BottomContainer = styled.div`
   display: flex;
   width: 100%;
-  justify-content: space-between;
   gap: 150px;
   align-items: center;
 `;
@@ -53,31 +50,22 @@ export const Heading = styled.h1`
   color: ${colors.secondary08};
 `;
 
-export const Title = styled.h1`
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 100%;
-  letter-spacing: 0px;
-  color: ${colors.secondary02};
-`;
-
 export const CardText = styled.h1`
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 130%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
   letter-spacing: -0.5px;
   color: ${colors.secondary05};
 `;
 
 export const NamesContainer = styled.div`
   display: flex;
-  gap: 5px;
-  width: 266px;
+  gap: 10px;
   flex-direction: column;
+  width: 266px;
 `;
 
-console.log(active);
-export const SwitchContainer = styled.div<{ active: boolean }>`
+export const SwitchContainer = styled.div<buttonProps>`
   margin: 0px auto;
   height: 20px;
   width: 36px;
@@ -86,14 +74,17 @@ export const SwitchContainer = styled.div<{ active: boolean }>`
   gap: 32px;
   padding: 2px;
   align-items: center;
-  background: ${(props) => (props.active ? "#C7231A" : "#C6C6C6")};
-  padding-left: ${(props) => (props.active ? "18px" : "5px")};
+  background: ${(props) => props.background};
+  position: relative;
 `;
-export const SwitchButton = styled.button`
+export const SwitchButton = styled.button<buttonProps>`
   width: 16px;
   height: 16px;
+  position: absolute;
   border-radius: 50%;
   background-color: ${colors.white};
   border: none;
   cursor: pointer;
+  left: ${(props) => props.alignItem};
+  transition: all 0.3s ease;
 `;

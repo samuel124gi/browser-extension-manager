@@ -33,7 +33,9 @@ html {
 
 body {
   margin: 0;
-  font-family: "League Spartan";
+  font-family: "Noto Sans";
+  /* background: #d6e2f5; */
+  background: linear-gradient(180deg, #ebf2fc 0%, #eefbf9 100%);
 }
 
 /**
